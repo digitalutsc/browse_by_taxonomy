@@ -1,0 +1,40 @@
+uuid: 22077e00-e4b1-494c-bcb5-74498d8cdcd7
+langcode: en
+status: true
+dependencies:
+  module:
+    - context
+id: browse_by_subject
+label: 'Browse by Subject'
+code: |
+  /* script for Browse by Subject View */
+  jQuery('.view-id-a_z_list_of_subjects .view-content').removeClass("row");
+  jQuery('.views-summary').prepend('<li id="show-all-link"><a href="/browse-subjects">All</a></li>');
+
+  var param = window.location.pathname.split("/").pop();
+  if (param == "browse-subjects") {
+    jQuery('#show-all-link').addClass("active");
+  } else {
+    jQuery('.is-active').parent().addClass("active");
+  }
+noscript: ''
+noscriptRegion: {  }
+jquery: false
+header: false
+preprocess: true
+conditions:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-a_z_list_of_subjects-page_1: view-a_z_list_of_subjects-page_1
+  context:
+    id: context
+    negate: null
+    values: ''
+  context_all:
+    id: context_all
+    negate: null
+    values: ''
+contexts: {  }
+conditions_require_all: true

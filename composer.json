@@ -1,0 +1,8 @@
+{
+    "name": "digitalutsc/browse_by_taxonomy",
+    "description": "Adds views to browse by subject or person",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "require": {}
+}
