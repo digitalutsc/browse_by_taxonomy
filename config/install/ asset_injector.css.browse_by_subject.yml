@@ -1,0 +1,46 @@
+uuid: 54b72a7d-5a2c-4f3d-a114-c82c13071d43
+langcode: en
+status: true
+dependencies:
+  module:
+    - context
+    - termwithuri_condition
+id: browse_by_subject
+label: 'Browse by subject'
+code: |-
+  .view-a-z-list-of-subjects {
+      padding-bottom: 40px;
+  }
+   
+  .view-id-a_z_list_of_subjects .item-list ul li {
+      margin: 0;
+      margin-right: 10px;
+  }
+   
+  .view-id-a_z_list_of_subjects li.active a {
+      color: #ffffff !important;
+      text-align: center;
+      padding-left: 15px;
+      padding-right: 7px;
+  }
+   
+  .view-id-a_z_list_of_subjects li.active a:visited {
+      color: #ffffff !important;
+  }
+media: all
+preprocess: true
+conditions:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-a_z_list_of_subjects-page_1: view-a_z_list_of_subjects-page_1
+  node_has_term:
+    id: node_has_term
+    logic: or
+    uri: 'http://purl.org/dc/dcmitype/Collection'
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+contexts: {  }
+conditions_require_all: true

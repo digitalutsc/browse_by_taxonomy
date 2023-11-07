@@ -1,0 +1,46 @@
+uuid: 875af486-31ef-4811-9cac-28cd3d0c2bde
+langcode: en
+status: true
+dependencies:
+  module:
+    - context
+    - termwithuri_condition
+id: browse_by_people
+label: 'Browse by people'
+code: |-
+  .view-a-z-list-of-people {
+      padding-bottom: 40px;
+  }
+   
+  .view-a-z-list-of-people .item-list ul li {
+      margin: 0;
+      margin-right: 10px;
+  }
+   
+  .view-a-z-list-of-people li.active a {
+      color: #ffffff !important;
+      text-align: center;
+      padding-left: 15px;
+      padding-right: 7px;
+  }
+   
+  .view-a-z-list-of-people li.active a:visited {
+      color: #ffffff !important;
+  }
+media: all
+preprocess: true
+conditions:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-a_z_list_of_people-page_1: view-a_z_list_of_people-page_1
+  node_has_term:
+    id: node_has_term
+    logic: or
+    uri: 'http://purl.org/dc/dcmitype/Collection'
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+contexts: {  }
+conditions_require_all: false
