@@ -4,3 +4,17 @@
  * @file
  * Contains browse_by_taxonomy.module.
  */
+
+use Drupal\views\ViewExecutable;
+
+/**
+* Implements hook_views_pre_render().
+*/
+function browse_by_taxonomy_views_pre_render(ViewExecutable $view) {
+  if (isset($view) && ($view->storage->id() == 'a_z_list_of_people')) {
+    $view->element['#attached']['library'][] = 'browse_by_taxonomy/browse_by_people';
+  }
+  if (isset($view) && ($view->storage->id() == 'a_z_list_of_subjects')) {
+    $view->element['#attached']['library'][] = 'browse_by_taxonomy/browse_by_subject';
+  }
+}

@@ -1,0 +1,23 @@
+.view-a-z-list-of-people {
+    padding-bottom: 40px;
+}
+ 
+.view-a-z-list-of-people .item-list ul li {
+    margin: 0;
+    margin-right: 10px;
+}
+ 
+.view-a-z-list-of-people li.active a {
+    color: #ffffff !important;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 7px;
+}
+ 
+.view-a-z-list-of-people li.active a:visited {
+    color: #ffffff !important;
+}
+
+body {
+    font-size: 32px;
+}

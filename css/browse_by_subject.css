@@ -1,0 +1,19 @@
+.view-a-z-list-of-subjects {
+    padding-bottom: 40px;
+}
+ 
+.view-id-a_z_list_of_subjects .item-list ul li {
+    margin: 0;
+    margin-right: 10px;
+}
+ 
+.view-id-a_z_list_of_subjects li.active a {
+    color: #ffffff !important;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 7px;
+}
+ 
+.view-id-a_z_list_of_subjects li.active a:visited {
+    color: #ffffff !important;
+}

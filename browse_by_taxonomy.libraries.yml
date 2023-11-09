@@ -1,0 +1,13 @@
+browse_by_people:
+  css:
+    theme:
+      css/browse_by_people.css: {}
+  js:
+    js/browse_by_people.js: {}
+
+browse_by_subject:
+  css:
+    layout:
+      css/browse_by_subject.css: {}
+  js:
+    js/browse_by_subject.js: {}
