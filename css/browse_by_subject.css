@@ -1,19 +1,33 @@
 .view-a-z-list-of-subjects {
     padding-bottom: 40px;
 }
- 
-.view-id-a_z_list_of_subjects .item-list ul li {
-    margin: 0;
-    margin-right: 10px;
+
+.view-header .view-a-z-list-of-subjects .view-content ul {
+    list-style: none;
+}
+
+.view-header .view-a-z-list-of-subjects .view-content li {
+    color: #000000;
+    display: inline-block;
+}
+
+.view-header .view-a-z-list-of-subjects .view-content li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 4px 8px 4px 8px;
 }
  
-.view-id-a_z_list_of_subjects li.active a {
+.view-header .view-a-z-list-of-subjects .view-content li.active a {
     color: #ffffff !important;
+    background: #000000;
     text-align: center;
-    padding-left: 15px;
-    padding-right: 7px;
 }
- 
-.view-id-a_z_list_of_subjects li.active a:visited {
-    color: #ffffff !important;
+
+.view-header .view-a-z-list-of-subjects .view-content li a:hover {
+    text-decoration: underline;
+}
+
+.view-a-z-list-of-subjects .view-content div ul li div p a {
+    color: #000000;
 }

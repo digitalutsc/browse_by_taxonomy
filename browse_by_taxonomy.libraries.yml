@@ -4,10 +4,14 @@ browse_by_people:
       css/browse_by_people.css: {}
   js:
     js/browse_by_people.js: {}
+  dependencies:
+    - core/jquery
 
 browse_by_subject:
   css:
-    layout:
+    theme:
       css/browse_by_subject.css: {}
   js:
     js/browse_by_subject.js: {}
+  dependencies:
+    - core/jquery
